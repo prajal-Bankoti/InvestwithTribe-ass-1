@@ -1,7 +1,7 @@
 .box {
   width: 40%;
   margin: auto;
-  height: 75vh;
+  height: 78.5vh;
   overflow: auto;
   margin-top: 50px;
 }
@@ -44,10 +44,25 @@
   border: 2px solid black;
   font-weight: bold;
   margin-left: 40px;
+  width: 30%;
 }
 .navbar {
-  width: 90%;
+  width: 80%;
   margin: auto;
   margin-bottom: 20px;
   margin-top: 20px;
+}
+.navbar #country-s:nth-child(2) {
+  width: 30%;
+}
+#cal {
+  width: 60%;
+  margin: auto;
+}
+
+#cal input{
+  width:20%;
+  border: 2px solid black;
+  font-weight: bold;
+  margin-left: 20px;
 }

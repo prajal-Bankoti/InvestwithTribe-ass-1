@@ -35,32 +35,32 @@ export function Home() {
             console.log(e.target.value);
           }}
         >
-          <option value="elgland">england</option>
-          <option value="ireland">northern-ireland</option>
-          <option value="scotland">scotland</option>
+          <option value="elgland">England</option>
+          <option value="ireland">Northern-ireland</option>
+          <option value="scotland">Scotland</option>
         </select>
         <select
           name=""
           id="country-s"
           onChange={(e) => {
             if (e.target.value === "1") {
-              setCal(ShowDate(data, 1, select));
+              setCal(ShowDate(data, -1, select));
             } else if (e.target.value === "7") {
-              setCal(ShowDate(data, 7, select));
+              setCal(ShowDate(data, -7, select));
             } else {
-              setCal(ShowDate(data, 30, select));
+              setCal(ShowDate(data, -30, select));
             }
-            setShow(false);
+               setShow(false);
           }}
         >
-          <option value="1">yesterday</option>
-          <option value="7">last week</option>
-          <option value="30">last month</option>
+          <option value="1">Yesterday</option>
+          <option value="7">Last week</option>
+          <option value="30">Last month</option>
         </select>
       </div>
-      <div style={{ width: "30%", margin: "auto" }}>
+      <div id="cal">
         {" "}
-        <BasicDateRangePicker date={[data, 7, select,setCal,setShow]} />
+        <BasicDateRangePicker date={[data, 7, select, setCal, setShow]} />
       </div>
 
       {show ? (
@@ -72,7 +72,7 @@ export function Home() {
           <Display data={data[0]} />
         )
       ) : (
-        <Display data={cal} />
+          <Display data={cal} />
       )}
     </div>
   );

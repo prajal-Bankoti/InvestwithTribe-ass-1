@@ -19,18 +19,23 @@ export function ShowDate(data, time, select) {
   } else {
     set = time;
   }
+  let date = new Date().toJSON().slice(0, 10);
+  let filter = data[count].filter((e) => {
 
-  const filter = data[count].filter((e) => {
     const day1 = new Date(e.date);
-    const day2 = new Date("2022-01-07");
+    const day2 = new Date(date);
     const difference = day1 - day2;
     const days = difference / (1000 * 3600 * 24);
-    console.log(days, set, "d");
-    if (set > 0) {
+
+  if (set > 0) {
       return days > 0 && days <= set;
     }
-    return days < 0 && days >= set;
+      return days < 0 && days >= set;
   });
-  console.log(filter);
+  
+  if (filter.length===0) {
+    filter = [{ title: "No data found", date: "" }];
+    console.log(filter);
+  }
   return filter;
 }
