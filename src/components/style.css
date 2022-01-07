@@ -1,0 +1,53 @@
+.box {
+  width: 40%;
+  margin: auto;
+  height: 75vh;
+  overflow: auto;
+  margin-top: 50px;
+}
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-thumb {
+  background: rgb(212, 216, 216);
+  border-radius: 10px;
+}
+
+.table {
+  width: 93%;
+  padding: 3%;
+  height: 20px;
+  padding-bottom: 15px;
+  color: white;
+  padding-top: 15px;
+  border: 1px solid rgb(182, 182, 182);
+  background-color: rgb(2, 2, 2);
+}
+
+.table:hover {
+  background-color: rgb(80, 255, 255);
+  color: black;
+}
+.table div {
+  float: left;
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+  text-align: justify;
+}
+.table div:nth-child(2) {
+  text-align: right;
+}
+#country-s {
+  height: 30px;
+  border: 2px solid black;
+  font-weight: bold;
+  margin-left: 40px;
+}
+.navbar {
+  width: 90%;
+  margin: auto;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
